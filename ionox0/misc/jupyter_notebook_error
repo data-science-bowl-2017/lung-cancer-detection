@@ -1,0 +1,1550 @@
+
+(tensorflow2)➜  data-science-bowl git:(master) ✗ jupyter notebook
+[W 20:38:06.757 NotebookApp] Error loading server extension jupyter_nbextensions_configurator
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/notebookapp.py", line 1117, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+        __import__(name)
+    ImportError: No module named jupyter_nbextensions_configurator
+[I 20:38:06.763 NotebookApp] Serving notebooks from local directory: /Users/ianjohnson/Desktop/data-science-bowl
+[I 20:38:06.763 NotebookApp] 0 active kernels 
+[I 20:38:06.763 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=888d1d1f9595b013bd72e357b4f62591c27032ba74efe93a
+[I 20:38:06.763 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 20:38:06.764 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=888d1d1f9595b013bd72e357b4f62591c27032ba74efe93a
+[I 20:38:07.423 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[W 20:38:08.240 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20170128203806 (::1) 16.23ms referer=http://localhost:8888/tree?token=c9bb025341da4ed151800126034011cab15d5d6031257e74
+[W 20:38:17.045 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20170128203806 (::1) 6.17ms referer=http://localhost:8888/tree/ionox0
+[W 20:38:19.838 NotebookApp] 404 GET /nbextensions/codefontsize/main.js?v=20170128203806 (::1) 2.49ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:38:19.852 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20170128203806 (::1) 2.58ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:38:19.856 NotebookApp] 404 GET /nbextensions/codefontsize.js?v=20170128203806 (::1) 2.64ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:38:19.867 NotebookApp] 404 GET /nbextensions/autoscroll/autoscroll_show_button.js?v=20170128203806 (::1) 2.94ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:38:19.878 NotebookApp] 404 GET /nbextensions/autoscroll.js?v=20170128203806 (::1) 2.59ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:38:19.904 NotebookApp] 404 GET /nbextensions/autoscroll_show_button.js?v=20170128203806 (::1) 2.38ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[I 20:38:20.118 NotebookApp] Kernel started: 8cb1f54c-bfc5-4f85-a9eb-f0a5f3d3fcc2
+[W 20:38:20.273 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170128203806 (::1) 3.77ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[I 20:40:20.391 NotebookApp] Saving file at /ionox0/tensorflow_tutorial.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 20:40:21.023 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/tensorflow_tutorial.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'tensorflow_tutorial.ipynb']' returned non-zero exit status 1
+[W 20:42:14.712 NotebookApp] 404 GET /nbextensions/codefontsize.js?v=20170128203806 (::1) 5.71ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[W 20:42:14.718 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20170128203806 (::1) 3.80ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[W 20:42:14.724 NotebookApp] 404 GET /nbextensions/codefontsize/main.js?v=20170128203806 (::1) 3.56ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[W 20:42:14.730 NotebookApp] 404 GET /nbextensions/autoscroll/autoscroll_show_button.js?v=20170128203806 (::1) 3.24ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[W 20:42:14.737 NotebookApp] 404 GET /nbextensions/autoscroll.js?v=20170128203806 (::1) 2.78ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[W 20:42:14.752 NotebookApp] 404 GET /nbextensions/autoscroll_show_button.js?v=20170128203806 (::1) 2.69ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[I 20:42:14.940 NotebookApp] Kernel started: a8605d2f-7693-4c55-bc9e-646cdfa61f66
+[W 20:42:15.125 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170128203806 (::1) 2.83ms referer=http://localhost:8888/notebooks/ionox0/LUNA_train_unet.ipynb
+[I 20:54:14.984 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 20:54:16.468 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[W 20:54:40.407 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20170128203806 (::1) 8.28ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.415 NotebookApp] 404 GET /nbextensions/autoscroll/autoscroll_show_button.js?v=20170128203806 (::1) 4.81ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.436 NotebookApp] 404 GET /nbextensions/autoscroll.js?v=20170128203806 (::1) 11.34ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.474 NotebookApp] 404 GET /nbextensions/autoscroll_show_button.js?v=20170128203806 (::1) 12.54ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.488 NotebookApp] 404 GET /nbextensions/codefontsize.js?v=20170128203806 (::1) 3.52ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.492 NotebookApp] 404 GET /nbextensions/codefontsize/main.js?v=20170128203806 (::1) 3.01ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+[W 20:54:40.702 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170128203806 (::1) 4.21ms referer=http://localhost:8888/notebooks/ionox0/tensorflow_tutorial.ipynb
+2017-01-28 20:54:56.811 Python[66925:2612854] Cannot find executable for CFBundle 0x7fa3eb63a2d0 </System/Library/Frameworks/Message.framework> (not loaded)
+[I 20:56:41.291 NotebookApp] Saving file at /ionox0/tensorflow_tutorial.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 20:56:42.236 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/tensorflow_tutorial.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'tensorflow_tutorial.ipynb']' returned non-zero exit status 1
+[I 21:00:14.995 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:00:17.476 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:02:14.973 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:02:16.722 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:04:14.976 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:04:16.584 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:06:14.980 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:06:16.585 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:08:15.028 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:08:16.796 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:10:14.993 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:10:16.898 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:12:14.993 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:12:16.881 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:14:14.992 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:14:16.175 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:16:14.993 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:16:16.181 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:18:14.997 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:18:16.480 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:20:14.999 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:20:17.051 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:22:15.333 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:22:17.450 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:24:15.337 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:24:17.051 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:26:15.337 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:26:16.601 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:28:15.341 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:28:17.283 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:30:15.350 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:30:17.892 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:32:15.347 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:32:16.849 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:34:15.348 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:34:17.549 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:36:15.353 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:36:17.055 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:38:15.561 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:38:16.958 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:40:15.360 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:40:16.524 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:42:15.709 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:42:17.253 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:44:15.363 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:44:16.981 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:46:15.368 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:46:17.005 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:48:15.425 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:48:17.057 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:50:15.374 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:50:17.077 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:52:15.376 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:52:16.638 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:54:15.061 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:54:16.673 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+[I 21:56:15.385 NotebookApp] Saving file at /ionox0/LUNA_train_unet.ipynb
+[TerminalIPythonApp] WARNING | Subcommand `ipython nbconvert` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter nbconvert` in the future
+Traceback (most recent call last):
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/bin/ipython", line 11, in <module>
+    sys.exit(start_ipython())
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/__init__.py", line 119, in start_ipython
+    return launch_new_instance(argv=argv, **kwargs)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/IPython/terminal/ipapp.py", line 344, in start
+    return self.subapp.start()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 305, in start
+    self.convert_notebooks()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/nbconvertapp.py", line 463, in convert_notebooks
+    self.exporter = cls(config=self.config)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/templateexporter.py", line 199, in __init__
+    super(TemplateExporter, self).__init__(config=config, **kw)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 102, in __init__
+    self._init_preprocessors()
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 256, in _init_preprocessors
+    self.register_preprocessor(preprocessor, enabled=True)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/nbconvert/exporters/exporter.py", line 217, in register_preprocessor
+    preprocessor_cls = import_item(preprocessor)
+  File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/traitlets/utils/importstring.py", line 34, in import_item
+    module = __import__(package, fromlist=[obj])
+ImportError: No module named jupyter_contrib_nbextensions.nbconvert_support
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@scipy.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    c.Application.verbose_crash=True
+
+[E 21:56:16.706 NotebookApp] Post-save hook failed on /Users/ianjohnson/Desktop/data-science-bowl/ionox0/LUNA_train_unet.ipynb
+    Traceback (most recent call last):
+      File "/Users/ianjohnson/.virtualenvs/tensorflow2/lib/python2.7/site-packages/notebook/services/contents/filemanager.py", line 115, in run_post_save_hook
+        self.post_save_hook(os_path=os_path, model=model, contents_manager=self)
+      File "/Users/ianjohnson/.jupyter/jupyter_notebook_config.py", line 530, in post_save
+        check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+      File "/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 540, in check_call
+        raise CalledProcessError(retcode, cmd)
+    CalledProcessError: Command '['ipython', 'nbconvert', '--to', 'script', u'LUNA_train_unet.ipynb']' returned non-zero exit status 1
+
